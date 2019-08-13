@@ -1,6 +1,6 @@
 
 nav {
-  font-family: 'Lobster Two', cursive;
+  font-family: var(--fancy_font), cursive;
   padding: 1.2em;
   color: var(--text_color);
   position: fixed;
@@ -20,6 +20,6 @@ nav #tweeterLogo {
 
 nav p {
   display: inline;
-  font-family: 'Lobster Two', Arial, Helvetica, sans-serif;
+  font-family: var(--fancy_font), Arial, Helvetica, sans-serif;
   margin: auto 0;
 }

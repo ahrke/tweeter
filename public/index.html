@@ -11,10 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin|Lobster|Lobster+Two&display=swap" rel="stylesheet">
     
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/colors.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/variables.css" type="text/css" />
     <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/section.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new_tweet.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/modal.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <!-- External JS -->
@@ -32,10 +34,28 @@
 
   <body>
 
+    <!-- Modal for new tweets -->
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 class='header'>What do you want to tell the world?</h2>
+          </div>
+          <div class="modal-body">
+              <form action="/tweets/" method="POST" id="newTweetForm">
+                <textarea name="text" class='newTweetTextArea'></textarea>
+                <input type="submit" value="Tweet" class="inputBtn" />  
+                <span class="counter"></span>
+              </form>
+          </div>
+        </div>
+    </div>
+
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id="tweeterLogo">tweeter</span>
-      <p>new tweet</p>
+      <p id="myBtn">new tweet</p>
     </nav>
 
     <header>
@@ -52,13 +72,63 @@
       </div>
     </header>
 
-    <section>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium exercitationem autem nulla quae ad ea tempora recusandae est? Quod officiis magnam sed doloremque vero quo pariatur! Accusantium delectus tempora quis sapiente cum, qui quo cumque optio iure sed. Consequatur asperiores iste quis voluptate facere modi accusamus officia, sed est in? Minus, perferendis odit hic delectus cum quidem nesciunt? Quo nihil repudiandae veritatis nobis? Enim qui natus necessitatibus nemo impedit eos ipsa magnam, obcaecati labore repellat velit fuga sequi, fugiat veritatis nihil nam in optio mollitia accusamus sunt. Natus, esse recusandae? Dolorem facere magni, quibusdam, modi odio possimus asperiores tempore vero veritatis doloremque facilis commodi quaerat saepe distinctio. Ipsum, voluptatum, eum, earum veniam perspiciatis velit aperiam optio praesentium delectus corrupti odio obcaecati quasi impedit quibusdam dolor doloribus eos? Amet dolore maiores iusto fugit accusantium similique laudantium quibusdam omnis accusamus impedit ipsum autem quaerat ratione libero consectetur aut hic in debitis doloribus excepturi sunt vitae, minus ullam! Inventore beatae similique iusto esse, deserunt, fugit dicta incidunt exercitationem vitae ipsa dolore quia dignissimos perferendis nemo optio molestiae mollitia quis odio obcaecati consectetur sunt sit iure. Numquam hic vero consequatur commodi eum illum ex aperiam sunt? Dolores voluptates optio laborum veritatis! Atque aspernatur quasi, voluptas placeat voluptate magnam ducimus, vitae ea magni sint facilis, sunt asperiores eum cumque aliquid blanditiis sapiente sit reiciendis iusto possimus perspiciatis deserunt. Dolore quam odit earum minima repellendus, voluptatibus nobis adipisci numquam dicta explicabo temporibus. Quisquam quaerat reprehenderit quod corporis, nulla eos laborum consectetur assumenda, doloremque molestiae, suscipit natus saepe illum minima labore iure non. At minima commodi ad eius, voluptatibus unde temporibus cum, obcaecati placeat dolorum eos accusantium, vel nostrum corrupti harum rerum amet suscipit quia tenetur fugit sequi voluptatem id. Sequi eum animi temporibus totam, eius, similique veritatis itaque asperiores laborum, nesciunt fugiat necessitatibus vitae fugit aliquam tempora illum ipsa incidunt ipsam provident cumque saepe fuga delectus sit. Eius doloremque qui molestias a nesciunt at dicta optio soluta sapiente, tempora quas facilis quod, dolores voluptatum. A, nisi omnis expedita aliquam fugiat at corporis sunt temporibus quas quod ullam cum qui minus necessitatibus sequi soluta accusamus ab error asperiores atque reiciendis ipsa nobis obcaecati! Perspiciatis ducimus quibusdam recusandae tempora commodi molestiae, beatae laudantium nihil explicabo impedit modi quam quod ratione at dolorum eveniet cum quo totam. Adipisci, nihil? Praesentium aliquid, ea adipisci velit ullam eius illo voluptatum tempore corrupti. Dignissimos quam commodi enim eaque, fugiat saepe dicta, delectus cupiditate cumque corporis harum hic nostrum ipsa exercitationem laudantium assumenda sit, necessitatibus quaerat natus blanditiis eveniet. Quaerat, ipsum suscipit tenetur atque provident iste non nostrum ducimus excepturi, mollitia commodi impedit velit voluptas, nesciunt nisi adipisci dolorem cum. Est assumenda ipsum quae ex error maiores nemo saepe, laborum similique id sit, repudiandae, ut doloremque enim harum. Ullam, odio neque modi eos animi fugit autem commodi hic, mollitia quo ex vitae laudantium minus exercitationem rem, nihil similique blanditiis ad. Laudantium debitis in deserunt incidunt totam soluta amet sit reiciendis? Alias iusto, dolorem aliquam reiciendis eaque pariatur. Minus molestiae rem ducimus culpa amet.
-    </section>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
+      
+      <article class="tweet">
+        <header>
+          <span class="userName">
+            Dexter's Lab
+          </span>
+          <span class="handle">
+            @iHateDeeDee
+          </span>
+        </header>
+        <p>
+          This is a tweeeet!
+        </p>
+        <hr>
+        <footer>
+          <span class="lastLogin">
+            5 days ago
+          </span>
+          <div>
+            <img src="./images/flag.png"></img>
+            <img src="./images/retweet.png"></img>
+            <img src="./images/heart.png"></img>
+          </div>
+        </footer>
+      </article>
+
+      <article class="tweet">
+          <header>
+            <span class="userName">
+              Sam
+            </span>
+            <span class="handle">
+              @iHoldItIn
+            </span>
+          </header>
+          <p>
+            To the mind that is still, the universe surrenders
+          </p>
+          <hr>
+          <footer>
+            <span class="lastLogin">
+              152 days ago
+            </span>
+            <div>
+              <img src="./images/flag.png"></img>
+              <img src="./images/retweet.png"></img>
+              <img src="./images/heart.png"></img>
+            </div>
+          </footer>
+        </article>
     </main>
 
+    <script type="text/javascript" src="/scripts/modal.js"></script>
+    <script type="text/javascript" src="./scripts/compose-char-counter.js"></script>
+    <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
   </body>
 </html>
+

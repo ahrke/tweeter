@@ -1,0 +1,52 @@
+.tweet {
+  padding: 20px;
+  margin: 20px 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1px solid var(--color_3);
+  width: 100%;
+  font-family: var(--general_font);
+}
+.tweet:hover {
+  box-shadow: 10px 10px var(--color_2);
+}
+
+.tweet header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet .userName {
+  
+}
+
+.tweet .handle {
+  opacity: 0;
+  font-size: 0.8em;
+  color: var(--color_2);
+}
+.tweet:hover .handle {
+  opacity: 1;
+}
+
+.tweet hr {
+  margin: 15px;
+}
+
+.tweet p {
+  padding-top: 30px;
+  margin: 15px;
+}
+
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7em;
+}
+
+.tweet img {
+  filter: invert(1);
+  padding: 2px 5px 0 5px;
+}

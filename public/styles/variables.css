@@ -1,0 +1,12 @@
+:root {
+  /* colors */
+  --nav_bg: #17223b;
+  --text_color: aliceblue;
+  --body_bg: #263859;
+  --color_3: #ff6768;
+  --color_2: #6b778d;
+
+  /* fonts */
+  --fancy_font: 'Lobster Two';
+  --general-font: 'Cabin';
+}

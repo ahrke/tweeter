@@ -1,0 +1,20 @@
+#newTweetForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#newTweetForm .counter {
+  color: var(--text_color);
+  margin: 10px 5px;
+  font-size: 0.8em;
+  margin-left: auto;
+}
+
+.inputBtn {
+  border-radius: 0 0 15px 15px;
+  padding: 10px 0;
+  border: none;
+  background-color: var(--body_bg);
+  color: var(--text_color);
+  font-family: var(--fancy_font);
+}
