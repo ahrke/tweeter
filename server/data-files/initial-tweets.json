@@ -20,5 +20,25 @@
       "text": "Je pense , donc je suis"
     },
     "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Dexter's Lab",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@iHateDeeDee" },
+    "content": {
+      "text": "Get out of my Laboratoryyyy!"
+    },
+    "created_at": 1061313959088
+  },
+  {
+    "user": {
+      "name": "Sam",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@yourMentalEscape" },
+    "content": {
+      "text": "To the mind that is still, the universe surrenders"
+    },
+    "created_at": 1175113959088
   }
 ]

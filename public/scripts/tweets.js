@@ -1,7 +1,7 @@
+
 // We need a way to render our tweets from user data, so we we'll build an 'article' object for each tweet, then append each one to the tweets section of our app
 let renderTweets = (tweets) => {
-  $("#tweets").append(tweets.map(tweet => createTweet(tweet)).join(''));
-  // return tweets.map(tweet => createTweet).join('');
+  $("#tweets").append(tweets.map(tweet => createTweet(tweet)).reverse().join(''));
 }
 
 let createTweet = (tweet) => {
@@ -45,35 +45,30 @@ let daysSinceCreated = (created) => {
   return Math.round(Math.abs((Number(new Date()) - created)/oneDay));
 }
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
+
+// We need a way to grab users from our database, as well as render the web page once they're all loaded
+$.get('/tweets', (res) => {
+  renderTweets(res);
+})
+
+$('#newTweetForm').on("submit", (e) => {
+  e.preventDefault();
+  
+  if($('.newTweetTextArea').val().length > 140) {
+    $('.invalidTweetAlert').text('Your wisdom can not exceed 140 words. Please edit for the enlightenment of others');
+    $('.invalidTweetAlert').slideToggle();
+    // window.alert("Your wisdom can not exceed 140 words. Please edit for the enlightenment of others");
+  } else if ($('.newTweetTextArea').val().length === 0) {
+    $('.invalidTweetAlert').text(`Hey you, I'd like to hear what you got on your mind. Care to share?`);
+    $('.invalidTweetAlert').slideToggle();
+    // window.alert("Hey you, I'd like to hear what you got on your mind. Care to share?");
+  } else {
+    $.post('/tweets', {text : $('.newTweetTextArea').val()});
+    location.reload()
   }
-]
+})
 
-
-renderTweets(data);
-
-// module.exports = {
-//   renderTweets,
-//   createTweet
-// }
+// after a warning is shown, we want to rehide our error. We'll do it once a key is pressed
+$('.newTweetTextArea').on("keydown", (e) => {
+    $('.invalidTweetAlert').css('display','none');
+})

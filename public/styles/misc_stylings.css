@@ -27,3 +27,34 @@
   width: 0;
   border-top: 67.84px solid var(--color_2);
 }
+
+#beamMeUpScotty {
+  display: none;
+  position: fixed;
+  z-index: 8;
+  right: 10px;
+  bottom: 10px;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  transform: rotate(270deg);
+  border-radius: 50%;
+  background-color: var(--nav_bg);
+  padding: 20px;
+  margin: 30px;
+  border: none;
+  font-weight: bolder;
+  color: var(--text_color)
+}
+
+#testBlend {
+  margin: 20px auto;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  height: 100vh;
+  -webkit-mask-image: url(../images/profile-hex.png);
+  mask-image: url(../images/profile-hex.png);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}

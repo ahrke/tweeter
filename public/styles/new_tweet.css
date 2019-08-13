@@ -8,6 +8,7 @@
   margin: 10px 5px;
   font-size: 0.8em;
   margin-left: auto;
+  padding: 20px 30px 5px 30px;
 }
 
 .newTweetTextArea {
@@ -15,6 +16,7 @@
   background-color: var(--text_color);
   color: var(--nav_bg);
   padding: 20px;
+  border: none;
 }
 
 .inputBtn {
@@ -24,4 +26,17 @@
   background-color: var(--body_bg);
   color: var(--text_color);
   font-family: var(--fancy_font);
+}
+
+.counter {
+  color: var(--nav_bg);
+}
+
+.invalidTweetAlert {
+  display: none;
+  border: 1px solid var(--error);
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  background-color: var(--error);
+  color: var(--text_color);
 }

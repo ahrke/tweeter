@@ -24,7 +24,6 @@
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
 
     <style>
       * {
@@ -34,6 +33,7 @@
   </head>
 
   <body>
+    <!-- <img id='testBlend' src='./images/header_back.jpg'></img> -->
 
     <!-- Modal for new tweets -->
     <div id="myModal" class="modal">
@@ -44,11 +44,12 @@
             <h2 class='header'>What do you want to tell the world?</h2>
           </div>
           <div class="modal-body">
-              <form action="/tweets/" method="POST" id="newTweetForm">
-                <textarea name="text" class='newTweetTextArea'></textarea>
-                <input type="submit" value="Tweet" class="inputBtn" />  
-                <span class="counter"></span>
-              </form>
+            <div class="invalidTweetAlert">hello</div>
+            <form action="/tweets/" method="POST" id="newTweetForm">
+              <textarea name="text" class='newTweetTextArea'></textarea>
+              <input type="submit" value="Tweet" class="inputBtn" />  
+              <span class="counter"></span>
+            </form>
           </div>
         </div>
     </div>
@@ -80,72 +81,16 @@
 
       </section>
       
-      <article class="tweet">
-        <header>
-          <span class="userName">
-            Dexter's Lab
-          </span>
-          <span class="handle">
-            @iHateDeeDee
-          </span>
-        </header>
-        <p>
-          Get out of my Laboratoryyyy!
-        </p>
-        <hr>
-        <footer>
-          <span class="lastLogin">
-            5 days ago
-          </span>
-          <div class='tweetImgGroup'>
-            <div class="imgWrap">
-              <img src="./images/flag.png"></img>
-            </div>
-            <div class="imgWrap">
-              <img src="./images/retweet.png"></img>
-            </div>
-            <div class="imgWrap">
-              <img src="./images/heart.png"></img>
-            </div>
-          </div>
-        </footer>
-      </article>
-
-      <article class="tweet">
-          <header>
-            <span class="userName">
-              Sam
-            </span>
-            <span class="handle">
-              @iHoldItIn
-            </span>
-          </header>
-          <p>
-            To the mind that is still, the universe surrenders
-          </p>
-          <hr>
-          <footer>
-            <span class="lastLogin">
-              152 days ago
-            </span>
-            <div class='tweetImgGroup'>
-                <div class="imgWrap">
-                  <img src="./images/flag.png"></img>
-                </div>
-                <div class="imgWrap">
-                  <img src="./images/retweet.png"></img>
-                </div>
-                <div class="imgWrap">
-                  <img src="./images/heart.png"></img>
-                </div>
-              </div>
-          </footer>
-        </article>
     </main>
 
+    <button id="beamMeUpScotty">>></button>
+
+    <!-- collection of javascript files. Loading at end to ensure document is complete before these get loaded -->
     <script type="text/javascript" src="/scripts/modal.js"></script>
     <script type="text/javascript" src="./scripts/compose-char-counter.js"></script>
-    <script type="text/javascript" src="./scripts/createTweetElement.js"></script>
+    <script type="text/javascript" src="./scripts/tweets.js"></script>
+    <script type="text/javascript" src="./scripts/avatar.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
     <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
   </body>
 </html>
