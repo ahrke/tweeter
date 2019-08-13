@@ -3,7 +3,7 @@
   margin: 20px 0;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  border: 1px solid var(--color_3);
+  border: 1px solid var(--color_2);
   width: 100%;
   font-family: var(--general_font);
 }
@@ -46,7 +46,21 @@
   font-size: 0.7em;
 }
 
+.tweetImgGroup {
+  display: flex;
+  flex-direction: row;
+}
+
 .tweet img {
   filter: invert(1);
-  padding: 2px 5px 0 5px;
+  width: 1em;
+}
+
+.imgWrap {
+  margin: 10px 7px;
+  height: 20px;
+  width: 20px;
+}
+.imgWrap:hover img {
+  width: 1.3em;
 }

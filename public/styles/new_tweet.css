@@ -10,6 +10,13 @@
   margin-left: auto;
 }
 
+.newTweetTextArea {
+  height: 200px;
+  background-color: var(--text_color);
+  color: var(--nav_bg);
+  padding: 20px;
+}
+
 .inputBtn {
   border-radius: 0 0 15px 15px;
   padding: 10px 0;

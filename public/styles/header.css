@@ -7,24 +7,31 @@
   background-attachment: fixed;
   width: 100%;
   height: 100%;
-  margin-top: 120px;
+  margin-top: 80px;
   height: 550px;
+  display: flex;
 }
 
 .avatarGroup {
-  padding: 100px;
   margin: auto;
   display: flex;
   flex-direction: column;
 }
 
 #avatarImg {
-  margin-top: 100px;
+  z-index: 5;
+}
+
+#avatarImg img {
+  position: relative;
+  top: -46px;
   margin: auto;
 }
 
 .headerBG .userName {
-  margin: auto;
+  position: relative;
+  top: -30px;
+  margin: 0 auto;
   color: var(--text_color);
   font-family: var(--fancy_font), Arial, Helvetica, sans-serif;
 }
