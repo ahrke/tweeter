@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./styles/modal.css" type="text/css" />
     <link rel="stylesheet" href="./styles/tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/misc_stylings.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/mainBody.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <!-- External JS -->
@@ -60,28 +61,27 @@
       <p id="myBtn">new tweet</p>
     </nav>
 
-    <header>
-      <div class="headerBG">
-        <div class='avatarGroup'>
-          <div class='hexagon'></div>
-          <div id="avatarImg">
-            <img src="/images/profile-hex.png"> 
+    <!-- This mainBody div will contain the header and tweets, in order to simplify responsive design for mody elements -->
+      <header class="headerBG">
+          <div class='avatarGroup'>
+            <div class='hexagon'></div>
+            <div id="avatarImg">
+              <img src="/images/profile-hex.png"> 
+            </div>
+            <br>
+            <div class="userName">
+                <h2>Your Name</h2>
+            </div>
           </div>
-          <br>
-          <div class="userName">
-              <h2>Your Name</h2>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section id="tweets">
-
-      </section>
-      
-    </main>
+      </header>
+  
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section id="tweets">
+  
+        </section>
+        
+      </main>
 
     <button id="beamMeUpScotty">>></button>
 
