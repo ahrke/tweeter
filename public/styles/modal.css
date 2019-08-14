@@ -1,4 +1,6 @@
-
+/*
+ * The structure for our modal. This is used for New Tweet Form.
+ */
 .modal {
   display: none; 
   position: fixed; 

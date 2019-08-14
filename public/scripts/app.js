@@ -1,5 +1,5 @@
 
-// render a button when user scrolls all the way down, to bring them back to top of the page
+// render a button when user scrolls all the way down. The button will send them back to top of the page
 $(window).scroll(function() {
   if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
     $('#beamMeUpScotty').fadeIn('slow');

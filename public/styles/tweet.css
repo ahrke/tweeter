@@ -1,3 +1,24 @@
+/*
+ * main is responsible for tweets section
+ */
+ main {
+  padding: 0 10px;
+  width: 90%;
+  margin: auto;
+  align-content: center;
+  text-align: center;
+  padding-top: 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    padding: 40px;
+    margin-top: 100px;
+    float: right;
+    width: 50%;
+  }
+}
+
 .tweet {
   padding: 20px;
   margin: 20px 0;
@@ -16,10 +37,6 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
-}
-
-.tweet .userName {
-  
 }
 
 .tweet .handle {
@@ -46,22 +63,22 @@
   font-size: 0.7em;
 }
 
-.tweetImgGroup {
-  display: flex;
-  flex-direction: row;
-}
-
 .tweet img {
   filter: invert(1);
   width: 1em;
 }
 
-.imgWrap {
+.tweetImgGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.tweetImgGroup div {
   margin: 10px 7px;
   height: 20px;
   width: 20px;
 }
-.imgWrap:hover img {
+.tweetImgGroup div:hover img {
   width: 1.3em;
 }
 

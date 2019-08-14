@@ -1,3 +1,8 @@
+/*
+ * This file is for experimental, and elements that don't fit in a specific section
+ * I'd like to have a hexagon behind our avatar's image...so here's our hexagon
+ */
+
 .hexagon {
   position: relative;
   top: 150px;
@@ -28,6 +33,9 @@
   border-top: 67.84px solid var(--color_2);
 }
 
+/*
+ * Styling for our 'back to top' button
+ */
 #beamMeUpScotty {
   display: none;
   position: fixed;
@@ -57,4 +65,9 @@
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-} */
+} 
+
+This was to test a possible way to use blend mode to enable us to use any image for our avatar, and have it shown as a hexagon using a mask. 
+Holding on for future tinkering.
+
+*/

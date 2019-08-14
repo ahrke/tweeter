@@ -34,22 +34,15 @@
   top: -30px;
   margin: 0 auto;
   color: var(--text_color);
-  font-family: var(--fancy_font), Arial, Helvetica, sans-serif;
+  font-family: var(--fancy_font);
 }
 
 @media only screen and (min-width: 1024px) {
   .headerBG {
     flex: 1;
-    margin-top: 20px;
     height: 100vh;
     position: fixed;
     top: 0px;
     width: 50%;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  .headerBG {
-    margin-top: 0;
   }
 }

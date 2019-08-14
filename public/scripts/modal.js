@@ -1,20 +1,14 @@
+// I'd like to have our New Tween Form pop up, rather than being on page. So I chose to use a modal to present our form to the user
 
-// Get the modal
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+var close = document.getElementsByClassName("close")[0];
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+close.onclick = function() {
   modal.style.display = "none";
 }
 

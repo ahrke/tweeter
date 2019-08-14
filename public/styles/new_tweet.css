@@ -1,3 +1,6 @@
+/*
+ * Form styling for our New Tweet Form. 
+ */
 #newTweetForm {
   display: flex;
   flex-direction: column;

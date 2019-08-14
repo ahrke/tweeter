@@ -10,6 +10,18 @@
     <!-- Font Files -->
     <link href="https://fonts.googleapis.com/css?family=Cabin|Lobster|Lobster+Two&display=swap" rel="stylesheet">
     
+    <!-- Clear default stylings -->
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/variables.css" type="text/css" />
     <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
@@ -18,7 +30,6 @@
     <link rel="stylesheet" href="./styles/modal.css" type="text/css" />
     <link rel="stylesheet" href="./styles/tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/misc_stylings.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/mainBody.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <!-- External JS -->
@@ -26,11 +37,6 @@
 
     <!-- App JS -->
 
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-    </style>
   </head>
 
   <body>
@@ -40,28 +46,28 @@
     <div id="myModal" class="modal">
 
       <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2 class='header'>What do you want to tell the world?</h2>
-          </div>
-          <div class="modal-body">
-            <div class="invalidTweetAlert">hello</div>
-            <form action="/tweets/" method="POST" id="newTweetForm">
-              <textarea name="text" class='newTweetTextArea'></textarea>
-              <input type="submit" value="Tweet" class="inputBtn" />  
-              <span class="counter"></span>
-            </form>
-          </div>
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2 class='header'>What do you want to tell the world?</h2>
         </div>
+        <div class="modal-body">
+          <div class="invalidTweetAlert"></div>
+          <form action="/tweets/" method="POST" id="newTweetForm">
+            <textarea name="text" class='newTweetTextArea'></textarea>
+            <input type="submit" value="Tweet" class="inputBtn" />  
+            <span class="counter"></span>
+          </form>
+        </div>
+      </div>
     </div>
 
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id="tweeterLogo">tweeter</span>
-      <p id="myBtn">new tweet</p>
+      <p id="myBtn"><b>new</b> tweet</p>
     </nav>
 
-    <!-- This mainBody div will contain the header and tweets, in order to simplify responsive design for mody elements -->
+    <!-- Header and Main will be our main responsive elements -->
       <header class="headerBG">
           <div class='avatarGroup'>
             <div class='hexagon'></div>
@@ -75,14 +81,15 @@
           </div>
       </header>
   
-      <!-- Page-specific (main) content here -->
-      <main class="container">
+      <!-- All our tweets will appear here -->
+      <main>
         <section id="tweets">
   
         </section>
         
       </main>
 
+    <!-- We'd like to have a button that sends users back to top if they've scrolled all the way down -->
     <button id="beamMeUpScotty">>></button>
 
     <!-- collection of javascript files. Loading at end to ensure document is complete before these get loaded -->

@@ -1,6 +1,9 @@
-
+/*
+ * Our nav bar. Not much to say here except that we want it to be fixed to top, also for it to be 'transparent' on mobile devices. 
+ * Added an animations (shake) for fun
+ */
 nav {
-  font-family: var(--fancy_font), cursive;
+  font-family: var(--fancy_font);
   padding: 1.2em 2.6em;
   color: var(--text_color);
   position: fixed;
@@ -8,7 +11,6 @@ nav {
   left: 0;
   height: 120px;
   width: 100%;
-  
   display: flex;
   justify-content: space-between;
   z-index: 10;
@@ -38,7 +40,7 @@ nav #tweeterLogo:hover {
 
 nav p {
   display: inline;
-  font-family: var(--fancy_font), Arial, Helvetica, sans-serif;
+  font-family: var(--general_font);
   margin: auto 0;
 }
 nav p:hover {
