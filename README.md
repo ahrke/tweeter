@@ -9,9 +9,14 @@ Use at your own discretion. Any ill-mannered tweets will be met with a unicorn h
 
 ## Final Product
 
-!["Registration Page"](/docs/main_page_desktop.jpg)
-!["All your URLs"](/docs/main_page_mobile.jpg)
-!["Edit a URL"](/docs/new_tweet_form.jpg)
+!["Main Page on Desktop"](/docs/main_page_desktop.jpg)
+This is the main page (desktop version)
+
+!["Main Page on Mobile"](/docs/main_page_mobile.jpg)
+This is what the main page looks like on mobile devices
+
+!["New Tweet Form"](/docs/new_tweet_form.jpg)
+This is the form to submit a new tweet to the awesome tweeterverse!
 
 ## Dependencies
 
