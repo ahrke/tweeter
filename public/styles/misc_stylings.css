@@ -53,21 +53,6 @@
   color: var(--text_color)
 }
 
-/* #testBlend {
-  margin: 20px auto;
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  height: 100vh;
-  -webkit-mask-image: url(../images/profile-hex.png);
-  mask-image: url(../images/profile-hex.png);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-} 
-
-This was to test a possible way to use blend mode to enable us to use any image for our avatar, and have it shown as a hexagon using a mask. 
-Holding on for future tinkering.
-
-*/
+.unselectable {
+  user-select: none;
+}
